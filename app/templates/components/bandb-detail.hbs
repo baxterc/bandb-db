@@ -9,7 +9,7 @@
 <ul>
   {{#each bandb.reviews as |review|}}
   <li><h4>{{review.author}} says:</h4>
-    <p>{{review.content}}</p>
+    <p>{{review.content}} on {{date-display review}}</p>
     <p>Score: {{review.score}} out of 5</p>
     <hr>
   </li>
