@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('browse');
   this.route('add-review');
   this.route('admin');
+  this.route('my-list');
 });
 
 export default Router;

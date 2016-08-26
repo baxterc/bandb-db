@@ -1,3 +1,5 @@
+<h3>My List</h3>
+{{#each myList.bandbs as |bandb|}}
 <div class="card bandb-card col-sm-4">
   <img class="card-img-top" src={{bandb.image}} alt={{bandb.name}}>
   <div class="card-block">
@@ -6,3 +8,4 @@
     <button {{action 'addToList' bandb}}>Add to My List</button>
   </div>
 </div>
+{{/each}}
