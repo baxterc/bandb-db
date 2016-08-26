@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('bandb');
   this.route('browse');
   this.route('add-review');
+  this.route('admin');
 });
 
 export default Router;
