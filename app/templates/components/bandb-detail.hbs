@@ -1,4 +1,14 @@
 
-  <h1>{{bandb.name}}</h1>
-  <h5>{{bandb.location}}</h5>
-  <img src={{bandb.image}}>
+<h1>{{bandb.name}}</h1>
+<h5>{{bandb.location}}</h5>
+<div><img src={{bandb.image}}></div>
+
+<ul>
+  {{#each bandb.reviews as |review|}}
+  <li><h4>{{review.author}} says:</h4>
+    <p>{{review.content}}</p>
+    <p>Score: {{review.score}} out of 5</p>
+    <hr>
+  </li>
+  {{/each}}
+</ul>
