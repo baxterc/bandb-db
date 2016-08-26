@@ -2,7 +2,42 @@
   <div id="review-form">
     <p>{{input placeholder="Your name" value=review-author}}</p>
     <p>{{input placeholder="Your review" value=review-content}}</p>
-    <p>{{input placeholder="Your score" value=review-score}}</p>
+    <p>Pick a review score:</p>
+    {{#radio-button
+      value=5
+      groupValue=score
+      changed="scoreToggled"}}
+      5 out of 5 (Outstanding!)
+    {{/radio-button}}<br>
+
+    {{#radio-button
+      value=4
+      groupValue=score
+      changed="scoreToggled"}}
+      4 out of 5 (Great)
+    {{/radio-button}}<br>
+
+    {{#radio-button
+      value=3
+      groupValue=score
+      changed="scoreToggled"}}
+      3 out of 5 (Acceptable)
+    {{/radio-button}}<br>
+
+    {{#radio-button
+      value=2
+      groupValue=score
+      changed="scoreToggled"}}
+      2 out of 5 (Unsatisfactory)
+    {{/radio-button}}<br>
+
+    {{#radio-button
+      value=1
+      groupValue=score
+      changed="scoreToggled"}}
+      1 out of 5 (Terrible)
+    {{/radio-button}}<br>
+
     <p><button {{action 'reviewCreate'}} class="btn btn-success btn-lg">Submit Review</button></p>
   </div>
 {{else}}
