@@ -30,5 +30,14 @@
 
 .main-navbar {
   display: block;
-  opacity: 0.8
+  opacity: 0.8;
+  background-color: #FF7900;
+}
+
+.bandb-card {
+  margin-left: 10px;
+}
+
+.bandb-card img {
+  width: 100%;
 }

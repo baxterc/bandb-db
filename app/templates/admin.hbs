@@ -1,1 +1,7 @@
 {{bandb-form bandbCreate="bandbCreate"}}
+
+<p>{{#link-to 'index'}}Back to Index{{/link-to}}</p>
+
+{{#each model as |bandb|}}
+<p>{{bandb.name}}</p>
+{{/each}}
