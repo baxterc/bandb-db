@@ -3,6 +3,9 @@
   <div class="card-block">
     <h4 class="card-title">{{#link-to 'bandb' bandb.id}}{{bandb.name}}{{/link-to}} {{bandb.averageScore}} {{price-display bandb}}</h4>
     <p class="card-text">{{bandb.description}}</p>
+    {{#if bandb.onMyList}}
+    {{else}}
     <button {{action 'addToList' bandb}}>Add to My List</button>
+    {{/if}}
   </div>
 </div>

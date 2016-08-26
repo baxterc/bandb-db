@@ -9,6 +9,7 @@ export default DS.Model.extend({
   image: DS.attr(),
   description: DS.attr(),
   reviews: DS.hasMany('review', {async: true}),
+  myList: Ember.inject.service(),
 
   averageScore: Ember.computed('this.reviews.@each.score', function() {
     var runningScore = 0;
@@ -17,4 +18,8 @@ export default DS.Model.extend({
     })
     return runningScore / this.get('reviews').get('length');
   }),
+
+  onMyList: Ember.computed('myList.bandbs.[]', function() {
+    return this.get('myList').includes(this);
+  })
 });
