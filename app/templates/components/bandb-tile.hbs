@@ -1,7 +1,7 @@
 <div class="card bandb-card col-sm-4">
   <img class="card-img-top" src={{bandb.image}} alt={{bandb.name}}>
   <div class="card-block">
-    <h4 class="card-title">{{#link-to 'bandb' bandb.id}}{{bandb.name}}{{/link-to}}</h4>
+    <h4 class="card-title">{{#link-to 'bandb' bandb.id}}{{bandb.name}}{{/link-to}} {{bandb.averageScore}}</h4>
     <p class="card-text">{{bandb.description}}</p>
   </div>
 </div>
