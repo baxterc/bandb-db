@@ -1,6 +1,27 @@
 <form>
   <p>{{input class="new-bandb" placeholder="Name" value=bandb-name}}</p>
-  <p>{{input class="new-bandb" placeholder="Price Range" value=bandb-price}}</p>
+  <p>Pick a price range: </p>
+      {{#radio-button
+        value=3
+        groupValue=bandb-price
+        changed="priceSet"}}
+        3 out of 3 (Spendy)
+      {{/radio-button}}<br>
+
+      {{#radio-button
+        value=2
+        groupValue=bandb-price
+        changed="priceSet"}}
+        2 out of 3 (Moderate)
+      {{/radio-button}}<br>
+
+      {{#radio-button
+        value=1
+        groupValue=bandb-price
+        changed="priceSet"}}
+        1 out of 3 (Inexpensive)
+      {{/radio-button}}<br>
+
   <p>{{input class="new-bandb" placeholder="Location" value=bandb-location}}</p>
   <p>{{input class="new-bandb" placeholder="Description" value=bandb-description}}</p>
   <p>{{input class="new-bandb" placeholder="Website" value=bandb-website}}</p>

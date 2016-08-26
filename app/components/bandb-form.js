@@ -1,7 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  price: 0,
   actions: {
+    priceSet(price){
+      this.set('price', price);
+    },
     bandbCreate() {
       var params = {
         name: this.get('bandb-name'),

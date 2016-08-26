@@ -13,10 +13,15 @@ export default DS.Model.extend({
 
   averageScore: Ember.computed('this.reviews.@each.score', function() {
     var runningScore = 0;
-    this.get('reviews').forEach(function(review){
-      runningScore += parseInt(review.get('score'));
-    })
-    return (runningScore / this.get('reviews').get('length')).toFixed(1);
+    if (this.get('reviews').get('length') > 0) {
+      this.get('reviews').forEach(function(review){
+        runningScore += parseInt(review.get('score'));
+      })
+      return (runningScore / this.get('reviews').get('length')).toFixed(1);
+    } else {
+      return 0;
+    }
+
   }),
 
   onMyList: Ember.computed('myList.bandbs.[]', function() {

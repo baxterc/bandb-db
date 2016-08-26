@@ -8,7 +8,6 @@ export default Ember.Component.extend({
       this.set('showReviewForm', true);
     },
     scoreToggled(score){
-      console.log(score)
       this.set('score', score);
     },
     reviewCreate() {
