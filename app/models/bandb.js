@@ -16,7 +16,7 @@ export default DS.Model.extend({
     this.get('reviews').forEach(function(review){
       runningScore += parseInt(review.get('score'));
     })
-    return runningScore / this.get('reviews').get('length');
+    return (runningScore / this.get('reviews').get('length')).toFixed(1);
   }),
 
   onMyList: Ember.computed('myList.bandbs.[]', function() {

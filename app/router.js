@@ -8,7 +8,6 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('bandb', {path: '/bandb/:bandb_id'});
   this.route('browse');
-  this.route('add-review');
   this.route('admin');
   this.route('my-list');
 });
