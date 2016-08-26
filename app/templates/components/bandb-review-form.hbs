@@ -1,0 +1,10 @@
+{{#if showReviewForm}}
+  <div id="review-form">
+    <p>{{input placeholder="Your name" value=review-author}}</p>
+    <p>{{input placeholder="Your review" value=review-content}}</p>
+    <p>{{input placeholder="Your score" value=review-score}}</p>
+    <p><button {{action 'reviewCreate'}} class="btn btn-success btn-lg">Submit Review</button></p>
+  </div>
+{{else}}
+<button {{action 'addReview'}}>Add a Review</button>
+{{/if}}
