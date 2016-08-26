@@ -3,5 +3,16 @@
 
   {{bandb-form bandbCreate="bandbCreate"}}
 
-  <p>{{#link-to 'index'}}Back to Index{{/link-to}}</p>
+  <hr>
+
+  <div>
+    <h3>Delete a B&amp;B</h3>
+    <div>
+      {{#each model as |bandb|}}
+        <div>
+          {{bandb.name}} <button {{action 'bandbDelete' bandb}}>Delete</button>
+        </div>
+      {{/each}}
+    </div>
+  </div>
 </div>
