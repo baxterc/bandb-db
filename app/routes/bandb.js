@@ -12,7 +12,11 @@ export default Ember.Route.extend({
       newReview.save().then(function() {
         return bandb.save();
       });
-    }
+    },
+
+    deleteReview(review) {
+      review.destroyRecord();
+    },
 
   }
 });

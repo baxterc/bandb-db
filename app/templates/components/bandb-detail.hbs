@@ -11,6 +11,7 @@
   <li><h4>{{review.author}} says:</h4>
     <p>{{review.content}} on {{date-display review}}</p>
     <p>Score: {{review.score}} out of 5</p>
+    <button {{action 'deleteReview' review}}>Delete</button>
     <hr>
   </li>
   {{/each}}
